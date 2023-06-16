@@ -11,7 +11,7 @@ function sieveOfEratosthenes(limit: number): void {
 }
 
 function main(): void {
-  let limit: number = 1_000_000;
+  let limit: number = 1000000;
 
   let start: number = new Date().getTime();
   sieveOfEratosthenes(limit);

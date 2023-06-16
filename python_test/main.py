@@ -9,7 +9,7 @@ def sieve_of_eratosthenes(limit):
                 primes[j] = False
 
 def main():
-    limit = 100_000_000
+    limit = 1000000
 
     start = time.time()
     sieve_of_eratosthenes(limit)

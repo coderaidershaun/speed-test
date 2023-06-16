@@ -20,7 +20,7 @@ void sieve_of_eratosthenes(long unsigned int limit) {
 }
 
 int main() {
-    long unsigned int limit = 100000000;
+    long unsigned int limit = 1000000;
 
     clock_t start, end;
     double cpu_time_used;

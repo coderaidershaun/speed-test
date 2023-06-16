@@ -14,7 +14,7 @@ void sieve_of_eratosthenes(unsigned long int limit) {
 }
 
 int main() {
-    unsigned long int limit = 100000000;
+    unsigned long int limit = 1000000;
     std::clock_t start, end;
     double cpu_time_used;
 

@@ -16,7 +16,7 @@ fn sieve_of_eratosthenes(limit: usize) {
 }
 
 fn main() {
-    let limit: usize = 100_000_000;
+    let limit: usize = 1000000;
 
     let start: Instant = Instant::now();
     sieve_of_eratosthenes(limit);

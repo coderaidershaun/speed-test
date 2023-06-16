@@ -16,7 +16,7 @@ void sieve_of_eratosthenes(size_t limit) {
 }
 
 int main() {
-    size_t limit = 100000000;
+    size_t limit = 1000000;
 
     clock_t start, end;
     double cpu_time_used;

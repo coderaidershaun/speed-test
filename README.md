@@ -94,7 +94,7 @@ Go:
 
 ```shell
 cd go_test
-go mod init example.com/speed
+go mod init speed
 go build
 ./speed
 ```
