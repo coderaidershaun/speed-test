@@ -1,4 +1,4 @@
-// node --max-old-space-size=21000 main.js
+// node main.js
 
 function sieveOfEratosthenes(limit) {
   let primes = new Array(limit).fill(true);

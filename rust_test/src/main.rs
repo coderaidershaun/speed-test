@@ -1,3 +1,5 @@
+// ts-node main.ts
+
 use std::time::Instant;
 
 fn sieve_of_eratosthenes(limit: usize) {
