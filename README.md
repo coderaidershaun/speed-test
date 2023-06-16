@@ -1,5 +1,7 @@
 ### Instructions
 
+Link to Code Kombat <a href="https://docs.google.com/spreadsheets/d/1yWYFfKgKHZqklo9lPYmRJO14HnYMALznm4Ghd24cML0/edit?usp=sharing">test results</a>
+
 ## Step 1 - Clone Repo
 
 Clone and cd into the repository:
