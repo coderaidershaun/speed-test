@@ -1,23 +1,23 @@
 function sieveOfEratosthenes(limit: number): void {
-  let primes: boolean[] = new Array(limit).fill(true);
+  let primes = new Uint8Array(limit).fill(1);
 
   for (let i = 2; i * i <= limit; i++) {
-    if (primes[i]) {
-      for (let j = i * i; j < limit; j += i) {
-        primes[j] = false;
+      if (primes[i]) {
+          for (let j = i * i; j < limit; j += i) {
+              primes[j] = 0;
+          }
       }
-    }
   }
 }
 
 function main(): void {
-  let limit: number = 1000000;
+  let limit = 1_000_000;
 
-  let start: number = new Date().getTime();
+  let start = new Date().getTime();
   sieveOfEratosthenes(limit);
-  let end: number = new Date().getTime();
+  let end = new Date().getTime();
 
-  let cpuTimeUsed: number = (end - start) / 1000.0;
+  let cpuTimeUsed = (end - start) / 1000.0;
 
   console.log("Time taken: " + cpuTimeUsed.toFixed(5) + " seconds");
 }

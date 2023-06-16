@@ -1,15 +1,15 @@
 import time
+import numpy as np
 
 def sieve_of_eratosthenes(limit):
-    primes = [True] * limit
-
-    for i in range(2, int(limit**0.5) + 1):
-        if primes[i]:
-            for j in range(i*i, limit, i):
-                primes[j] = False
+    primes = np.ones(limit, dtype=bool)
+    primes[:2] = 0
+    for ind, val in enumerate(primes):
+        if val is True:
+            primes[ind*2::ind] = 0
 
 def main():
-    limit = 1000000
+    limit = 1_000_000
 
     start = time.time()
     sieve_of_eratosthenes(limit)

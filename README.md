@@ -57,6 +57,8 @@ Python:
 sudo apt update
 python3 --version
 sudo apt install python3
+sudo apt install python3-pip
+pip3 install numpy
 ```
 
 Node JS:
@@ -87,15 +89,15 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 C:
 
 ```shell
-gcc test_memory.c -o test_memory
-gcc test_speed.c -o test_speed
-./test_speed
-./test_memory
+cd c_test
+gcc test.c -o test
+./test
 ```
 
 C++:
 
 ```shell
+cd cpp_test
 g++ -std=c++11 test.cpp -o test
 ./test
 ```

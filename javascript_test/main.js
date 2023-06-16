@@ -1,19 +1,17 @@
-// node main.js
-
 function sieveOfEratosthenes(limit) {
-  let primes = new Array(limit).fill(true);
+  let primes = new Uint8Array(limit).fill(1);
 
   for (let i = 2; i * i <= limit; i++) {
       if (primes[i]) {
           for (let j = i * i; j < limit; j += i) {
-              primes[j] = false;
+              primes[j] = 0;
           }
       }
   }
 }
 
 function main() {
-  let limit = 1000000;
+  let limit = 1_000_000;
 
   let start = new Date().getTime();
   sieveOfEratosthenes(limit);

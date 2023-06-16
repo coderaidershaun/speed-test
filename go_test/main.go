@@ -5,16 +5,14 @@ import (
 	"time"
 )
 
-func sieveOfEratosthenes(limit int) []bool {
-	primes := make([]bool, limit)
-	for i := 2; i < limit; i++ {
-		primes[i] = true
-	}
+func sieveOfEratosthenes(limit int) []uint8 {
+	size := (limit + 7) / 8 // Round up division
+	primes := make([]uint8, size)
 
 	for p := 2; p*p <= limit; p++ {
-		if primes[p] {
+		if primes[p/8]&(1<<(p%8)) == 0 {
 			for i := p * p; i < limit; i += p {
-				primes[i] = false
+				primes[i/8] |= 1 << (i % 8)
 			}
 		}
 	}
@@ -22,7 +20,7 @@ func sieveOfEratosthenes(limit int) []bool {
 }
 
 func main() {
-	limit := 100000000
+	limit := 1_000_000
 
 	start := time.Now()
 	sieveOfEratosthenes(limit)

@@ -1,20 +1,24 @@
-// g++ -std=c++11 test.cpp -o test
 #include <iostream>
 #include <vector>
 #include <ctime>
 
-void sieve_of_eratosthenes(unsigned long int limit) {
-    std::vector<bool> primes(limit, true);
-    for (unsigned long int i = 2; i * i < limit; i++) {
-        if (primes[i] == true) {
-            for (unsigned long int j = i * i; j < limit; j += i)
-                primes[j] = false;
+void sieve_of_eratosthenes(size_t limit) {
+    if (limit < 2) return;
+
+    std::vector<bool> primes((limit - 1) / 2, true);
+    size_t p_limit = (limit - 1) / 2;
+
+    for (size_t p = 3; p * p <= limit; p += 2) {
+        if (primes[p / 2]) {
+            for (size_t i = p * p / 2; i < p_limit; i += p) {
+                primes[i] = false;
+            }
         }
     }
 }
 
 int main() {
-    unsigned long int limit = 1000000;
+    size_t limit = 1000000;
     std::clock_t start, end;
     double cpu_time_used;
 
@@ -24,7 +28,7 @@ int main() {
 
     cpu_time_used = static_cast<double>(end - start) / CLOCKS_PER_SEC;
 
-    std::cout << "C++ Memory: " << cpu_time_used << " seconds" << std::endl;
+    std::cout << "C++ Speed: " << cpu_time_used << " seconds" << std::endl;
 
     return 0;
 }
