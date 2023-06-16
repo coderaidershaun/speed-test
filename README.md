@@ -9,11 +9,17 @@ git clone git clone https://github.com/coderaidershaun/speed-test-sieve-eratosth
 cd speed_test
 ```
 
-## Step 2 - Prepare Ubuntu on EC2
+## Step 2 - Spin Up a Machine
 
-1 - Create an Ubuntu 22.04 instance on AWS as EC2 or use your preferred approach.
+Create an Ubuntu 22.04 instance on AWS as EC2 or use your preferred approach. 
 
-2 - Below Are the instructions for installing languages. Start with:
+The example shown on YouTube uses a T2 - Medium machine (x86 architecture).
+
+If you prefer, you can just run this locally but commands will be different if using Windows so some experience/googling/chatgippitying might be necessary.
+
+## Step 3 - Prepare Ubuntu on EC2
+
+3 - Below Are the instructions for installing languages. Start with:
 
 ```shell
 sudo apt update
