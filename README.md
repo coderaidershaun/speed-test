@@ -7,7 +7,7 @@ Link to Code Kombat <a href="https://docs.google.com/spreadsheets/d/1yWYFfKgKHZq
 Clone and cd into the repository:
 
 ```shell
-git clone git clone https://github.com/coderaidershaun/speed-test-sieve-eratosthenes.git speed_test
+git clone git clone https://github.com/coderaidershaun/speed-test.git speed_test
 cd speed_test
 ```
 
