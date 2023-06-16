@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func sieveOfEratosthenes(limit int) []uint8 {
+func sieveOfEratosthenes(limit int) {
 	size := (limit + 7) / 8 // Round up division
 	primes := make([]uint8, size)
 
@@ -16,11 +16,10 @@ func sieveOfEratosthenes(limit int) []uint8 {
 			}
 		}
 	}
-	return primes
 }
 
 func main() {
-	limit := 1_000_000
+	limit := 500_000_000
 
 	start := time.Now()
 	sieveOfEratosthenes(limit)

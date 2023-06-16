@@ -109,7 +109,7 @@ Go:
 cd go_test
 go mod init speed
 go build
-./speed
+./test
 ```
 
 Python:
